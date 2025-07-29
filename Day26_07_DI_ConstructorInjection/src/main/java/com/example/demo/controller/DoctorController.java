@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,7 +40,6 @@ public class DoctorController {
 
 	}
 
-	
 	@GetMapping("doctor/{id}/{specialization}")
 	public Doctor getbyId(@PathVariable int id, @PathVariable String specialization) {
 
@@ -53,6 +54,13 @@ public class DoctorController {
 		}
 
 		return null;
+
+	}
+
+	@GetMapping("doctor/all")
+	public List<Doctor> getAllDoctors() {
+
+		return neroServiceImpl.getAllDoctor(); // common in both child return the same output i.e. all doctors
 
 	}
 
