@@ -63,5 +63,24 @@ public class DoctorController {
 		return neroServiceImpl.getAllDoctor(); // common in both child return the same output i.e. all doctors
 
 	}
+	
+	
+	@GetMapping("doctor/{specialization}")
+	public List<Doctor> getDoctorsbySpecialisation(@PathVariable String specialization) {
+
+		if (specialization.equalsIgnoreCase("nero")) {
+			return neroServiceImpl.getDoctorsBySpeaciality();			//Retrieve all the doctors with the nero specialty
+		}
+
+		if (specialization.equalsIgnoreCase("cardiac")) {
+			return cardiacServiceImpl.getDoctorsBySpeaciality();		//Retrieve all the doctors with the cardiac specialty
+		}
+
+		return null;
+
+	}
+	
+	
+	
 
 }
