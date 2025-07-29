@@ -80,6 +80,36 @@ public class DoctorController {
 
 	}
 	
+	/*@GetMapping("doctor/{specialization}")
+	public List<Doctor> getDoctorsbySpecialisation(@PathVariable String specialization) {
+		
+		if (specialization.equalsIgnoreCase("nero")) {
+			return neroServiceImpl.getDoctorsBySpeaciality();			//Retrieve all the doctors with the nero specialty
+		}
+		
+		if (specialization.equalsIgnoreCase("cardiac")) {
+			return cardiacServiceImpl.getDoctorsBySpeaciality();		//Retrieve all the doctors with the cardiac specialty
+		}
+		
+		return null;
+		
+	}*/
+	
+	/*@GetMapping("doctor/{specialization}")
+	public List<Doctor> getDoctorsbySpecialisation(@PathVariable String specialization) {
+		
+		if (specialization.equalsIgnoreCase("nero")) {
+			return neroServiceImpl.getDoctorsBySpeaciality();			//Retrieve all the doctors with the nero specialty
+		}
+		
+		if (specialization.equalsIgnoreCase("cardiac")) {
+			return cardiacServiceImpl.getDoctorsBySpeaciality();		//Retrieve all the doctors with the cardiac specialty
+		}
+		
+		return null;
+		
+	}*/
+	
 	
 	
 
