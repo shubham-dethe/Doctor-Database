@@ -7,27 +7,24 @@ import com.example.demo.entity.Doctor;
 import com.example.demo.repository.DocRepository;
 
 @Service
-public class NeroServiceImpl implements DoctorService {
+public class NeroServiceImpl extends DoctorServiceAb {
 
 	@Autowired
 	DocRepository dr;
-	
-	
+
 	@Override
 	public String saveDoctor(Doctor d) {
-		
-		
+
 		d.setRequiredExperinece(8);
 		d.setFees(5000);
-		
+
 		dr.save(d);
 		return "Doctor Added for Nero";
 	}
 
-
 	@Override
 	public Doctor getById(int id) {
-		
+
 		return dr.findById(id).get();
 	}
 
