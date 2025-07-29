@@ -28,7 +28,7 @@ public class Doctor {
 		this.city = city;
 	}
 	private int requiredExperinece;			//explicitly set on child impl requirement.
-	private int fees;				//explicitly set on child impl requirement.
+	private int fees;						//explicitly set on child impl requirement.
 	private int age;
 	public int getId() {
 		return id;

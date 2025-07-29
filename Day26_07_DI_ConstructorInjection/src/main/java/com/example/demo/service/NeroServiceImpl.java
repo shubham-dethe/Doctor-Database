@@ -24,4 +24,11 @@ public class NeroServiceImpl implements DoctorService {
 		return "Doctor Added for Nero";
 	}
 
+
+	@Override
+	public Doctor getById(int id) {
+		
+		return dr.findById(id).get();
+	}
+
 }
