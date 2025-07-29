@@ -5,9 +5,8 @@ import com.example.demo.entity.Doctor;
 
 public interface DoctorService {
 	
-	void saveDoctor(Doctor d);
-	
-	void getDoctorbyId();
+	public String saveDoctor(Doctor d);
+		
 	
 
 }
