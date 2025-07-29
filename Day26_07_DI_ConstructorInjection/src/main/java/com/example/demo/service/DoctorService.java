@@ -12,6 +12,8 @@ public interface DoctorService {
 	public Doctor getById(int id);
 	
 	public List<Doctor> getAllDoctor();
+	
+	public List<Doctor> getDoctorsBySpeaciality();
 		
 	
 
