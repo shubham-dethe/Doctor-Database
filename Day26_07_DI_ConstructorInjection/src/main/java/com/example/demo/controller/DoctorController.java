@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Doctor;
 import com.example.demo.service.DoctorService;
+import com.example.demo.service.DoctorServiceAb;
 
 @RestController
 public class DoctorController {
@@ -56,10 +58,11 @@ public class DoctorController {
 		return null;
 
 	}
-
+	
+	
 	@GetMapping("doctor/all")
 	public List<Doctor> getAllDoctors() {
-
+		
 		return neroServiceImpl.getAllDoctor(); // common in both child return the same output i.e. all doctors
 
 	}
@@ -80,35 +83,6 @@ public class DoctorController {
 
 	}
 	
-	/*@GetMapping("doctor/{specialization}")
-	public List<Doctor> getDoctorsbySpecialisation(@PathVariable String specialization) {
-		
-		if (specialization.equalsIgnoreCase("nero")) {
-			return neroServiceImpl.getDoctorsBySpeaciality();			//Retrieve all the doctors with the nero specialty
-		}
-		
-		if (specialization.equalsIgnoreCase("cardiac")) {
-			return cardiacServiceImpl.getDoctorsBySpeaciality();		//Retrieve all the doctors with the cardiac specialty
-		}
-		
-		return null;
-		
-	}*/
-	
-	/*@GetMapping("doctor/{specialization}")
-	public List<Doctor> getDoctorsbySpecialisation(@PathVariable String specialization) {
-		
-		if (specialization.equalsIgnoreCase("nero")) {
-			return neroServiceImpl.getDoctorsBySpeaciality();			//Retrieve all the doctors with the nero specialty
-		}
-		
-		if (specialization.equalsIgnoreCase("cardiac")) {
-			return cardiacServiceImpl.getDoctorsBySpeaciality();		//Retrieve all the doctors with the cardiac specialty
-		}
-		
-		return null;
-		
-	}*/
 	
 	
 	
